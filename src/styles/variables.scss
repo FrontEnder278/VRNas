@@ -1,0 +1,54 @@
+@use 'helpers' as *;
+:root {
+  // Цвета
+  --color-white: #FFFFFF;
+  --color-gray:  #D1D1D1;
+  --color-gray-alt: #B0B0B2;
+  --color-black-alt: #252532;
+  --color-black: #18181B;
+  --color-green: #00C566;
+  --color-red: #FF4747;
+  --color-yellow: #FACC15;
+  --color-blue: #19B5F1;
+  --color-purpure: #CA6AEB;
+
+  // Градиент
+  --background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+  --background-border: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+
+  // Рамка
+  --border: 1px solid linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+  --border-purpure: 1px solid var(--color-purpure);
+
+  --card-border-black-alt:
+  linear-gradient(var(--color-black-alt), var(--color-black-alt)) padding-box,
+  linear-gradient(135deg, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0) 80%) border-box;
+
+  --card-border-gray-alt:
+  linear-gradient(var(--color-gray-alt), var(--color-gray-alt)) padding-box,
+  linear-gradient(135deg, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0) 80%) border-box;
+
+
+  --card-border-gradient-black-alt:
+  linear-gradient(var(--color-black-alt), var(--color-black-alt)) padding-box,
+  linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%) border-box;
+
+  --card-border-gradient-black:
+  linear-gradient(var(--color-black), var(--color-black)) padding-box,
+  linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%) border-box;
+
+
+  // Шрифт
+  --font-family: 'ChakraPetch', sans-serif;
+
+  // Контейнер
+  --container-width: #{fluid-to-laptop($container-desktop-width, $container-laptop-width)};
+  --container-padding-x: 16px;
+
+  // Промежутки между секциями
+  --section-padding-y: #{fluid(75, 40)};
+
+  // Длительность
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s; // для раскрытия аккордиона
+}

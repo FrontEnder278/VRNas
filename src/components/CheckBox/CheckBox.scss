@@ -1,0 +1,23 @@
+.checkbox {
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(14, 10);
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 12px;
+    color: var(--color-white);
+
+    &::before {
+      content: '';
+      display: inline-flex;
+      width: 16px;
+      height: 16px;
+      background-image: url("/public/check-box.svg");
+    }
+  }
+}

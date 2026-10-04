@@ -1,0 +1,225 @@
+.tooltip {
+
+  &__inner {
+    max-width: 420px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    column-gap: fluid(16, 8);
+    z-index: 10;
+    opacity: 1;
+    user-select: none;
+
+    .tooltip__icon:not(.is-active) + .tooltip__card {
+      opacity: 0;
+    }
+
+
+
+    &--1 {
+      bottom: 37%;
+      left: 26%;
+      transition-duration: var(--transition-duration-longer);
+
+      @include mobile-s {
+        &.is-active {
+          left: 10px;
+        }
+      }
+    }
+
+    &--2 {
+      bottom: 28%;
+      left: 60%;
+      transition-duration: var(--transition-duration-longer);
+
+      &.is-active {
+        @include mobile-above {
+          transform: translateX(-250px);
+        }
+
+        @include mobile {
+          left: 20px;
+        }
+      }
+    }
+
+    &--3 {
+      top: 0;
+      left: 72%;
+      transition-duration: var(--transition-duration-longer);
+
+      &.is-active {
+        @include mobile-above {
+          transform: translateX(-250px);
+        }
+
+        @include mobile {
+          left: 20px;
+        }
+      }
+    }
+
+    &--4 {
+      top: 23%;
+      left: 25%;
+      transition-duration: var(--transition-duration-longer);
+
+      @include mobile-s {
+
+        &.is-active {
+          left: 20px;
+        }
+      }
+    }
+
+    &--5 {
+      top: 15%;
+      left: 48%;
+      transition-duration: var(--transition-duration-longer);
+
+      &.is-active {
+        @include mobile-above {
+          transform: translateX(-250px);
+        }
+
+        @include mobile-s {
+          left: 20px;
+        }
+      }
+    }
+
+    &--6 {
+      top: 31%;
+      left: 65%;
+      transition-duration: var(--transition-duration-longer);
+
+      &.is-active {
+        @include mobile-above {
+          transform: translateX(-250px);
+        }
+
+        @include mobile {
+          left: 20px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    @include flex-center(false);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border: 1px solid transparent;
+    background: var(--card-border-black-alt);
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include mobile-s {
+      width: 60px;
+      height: 60px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      opacity: 0;
+      padding: 1px;
+      border-radius: 50%;
+      background: linear-gradient(90deg,
+      rgba(255,255,255,0.25) 0%,
+      rgba(255,255,255,0.05) 100%);
+      -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &:hover::before {
+      background: linear-gradient(
+      90deg,
+      #0CBAF1 0%,
+      #E95CE9 100%);
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  &__card {
+    font-size: fluid(16, 14);
+    color: var(--color-gray-alt);
+    position: relative;
+    width: 297px;
+    min-height: 123px;
+    padding: 18px 23px;
+    transform: scaleY(0);
+    opacity: 0;
+    transition-duration: var(--transition-duration-longer);
+    background: rgba(37, 37, 50, 0.77);
+    clip-path: polygon(6% 0%, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
+
+    @include mobile-s {
+      width: 250px;
+      padding: 14px 20px;
+    }
+    // рамка
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      background: radial-gradient(
+      circle at 30% 50%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
+      clip-path: polygon(6% 0%, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &-info {
+      display: grid;
+      row-gap: 8px;
+    }
+
+    &-author {
+      position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 70%;
+      height: 1px;
+      background: linear-gradient(
+      90deg,
+      #0CBAF1 0%,
+      #E95CE9 100%);
+    }
+  }
+
+    &-author > span {
+      color: var(--color-white);
+    }
+
+    &.is-active {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+}

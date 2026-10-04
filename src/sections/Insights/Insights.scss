@@ -1,0 +1,28 @@
+.insights {
+  --section-padding-y: 300px;
+  padding-top: var(--section-padding-y);
+  position: relative;
+  z-index: 100;
+  &__button {
+    &:hover {
+
+    }
+  }
+}
+
+.insights .section__body {
+  display: flex;
+  align-items: flex-start;
+
+  @include laptop {
+    flex-direction: column;
+    row-gap: 100px;
+  }
+
+}
+
+.insights .section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

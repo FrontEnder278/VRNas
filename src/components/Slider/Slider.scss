@@ -1,0 +1,64 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  flex: 0 1 636px;
+  margin: 0;
+  min-width: 0;
+
+  @include laptop {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  @include mobile-s {
+    height: 300px;
+  }
+
+  &-swiper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 44px;
+    position: relative;
+    z-index: 100;
+
+    @include laptop {
+      row-gap: 50px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+    position: relative;
+    z-index: 100;
+
+    @include laptop {
+      column-gap: 20px;
+    }
+
+    &-bullet {
+      width: 10px;
+      height: 4px;
+      border-radius: 30px;
+      background-color: var(--color-gray);
+      transition-duration: var(--transition-duration);
+      cursor: pointer;
+
+      @include laptop {
+        width: 12px;
+        height: 6px;
+      }
+
+      &.is-active {
+        background-color: var(--color-blue);
+        width: 18px;
+
+        @include laptop {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

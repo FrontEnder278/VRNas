@@ -1,0 +1,45 @@
+.client-icons {
+  display: flex;
+  align-items: center;
+  column-gap: fluid(18, 14);
+
+  &__header {
+    display: flex;
+  }
+
+  &__image {
+    --iconSize: 50px;
+
+    width: var(--iconSize);
+    border-radius: 50%;
+    border: var(--border-purpure);
+
+    &:not(:first-child) {
+      margin-left: calc(var(--iconSize) /4 * -1);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+  }
+
+  &__number {
+    position: relative;
+    font-weight: 600;
+    color: var(--color-white);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10%;
+      top: 80%;
+      width: 48px;
+      height: 8px;
+      background-image: url("../../assets/images/gradient-line.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.affordable .section__header {
+  max-width: 750px;
+}
+
+.affordable {
+  display: grid;
+  row-gap: fluid(40, 20);
+}

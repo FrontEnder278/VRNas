@@ -1,0 +1,77 @@
+.subscribe {
+  background: var(--background);
+  padding: fluid(38, 30) fluid(74, 35);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: fluid(30, 8);
+      max-width: 700px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    letter-spacing: -0.01em;
+    font-size: 30px;
+
+    @include mobile-above {
+      max-width: 520px;
+    }
+
+  }
+
+  &__label {
+    width: 204px;
+  }
+
+  &__input {
+    padding-block: 10px;
+    padding-left: 46px;
+    padding-right: 60px;
+    font-size: 15px;
+    line-height: 1.75;
+    width: 100%;
+    max-width: 385px;
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    color: var(--color-white);
+
+    &::placeholder {
+      color: var(--color-white);
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 365px;
+    width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 16px;
+    color: var(--color-white);
+  }
+
+  &__button {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    background: rgba(255, 255, 255, 0.21);
+  }
+
+  //&__wrapper {
+  //  display: flex;
+  //  column-gap: fluid(84, 40);
+  //}
+}

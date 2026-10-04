@@ -1,0 +1,26 @@
+.advantages-card {
+  padding: fluid-to-laptop(42, 34) fluid-to-laptop(64, 40);
+  border: 1px solid transparent;
+  background: var(--card-border-black-alt);
+
+  &__list {
+    display: grid;
+    row-gap: fluid(50, 40);
+
+    @include mobile-above {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: fluid-to-laptop(50, 40);
+    }
+
+  }
+
+  &__item {
+    display: grid;
+    row-gap: 42px;
+
+    &-wrapper {
+      display: grid;
+      row-gap: 12px;
+    }
+  }
+}

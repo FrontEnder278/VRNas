@@ -1,0 +1,29 @@
+.section {
+  padding-bottom: fluid(100, 50);
+  column-gap: 50px;
+
+  &__header {
+    display: grid;
+    align-self: end;
+    row-gap: 12px;
+    padding-bottom: 40px;
+  }
+
+  &__subtitle { // градиентный текст
+    background: linear-gradient(
+    90deg, #0CBAF1 0, #E95CE9 100%);
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 32px;
+    padding-block: 28px 18px;
+  }
+}

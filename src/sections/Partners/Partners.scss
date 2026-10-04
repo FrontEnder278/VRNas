@@ -1,0 +1,65 @@
+.partners {
+  position: relative;
+  height: 1000px;
+  padding-block: var(--section-padding-y);
+
+  &__wrapper {
+    position: relative;
+
+
+    // высота видимой области
+    width: 100%;
+    max-width: 1200px;          // ограничение для десктопа
+    aspect-ratio: 1200 / 1300;
+  }
+
+  &__image {
+    z-index: 1;
+    position: absolute;
+    left: 50.3%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 52%;
+    height: auto;
+  }
+
+
+}
+
+.partners .section__header {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.partners .rings {
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1px solid var(--color-gray-alt);
+      opacity: 0.4;
+      aspect-ratio: 1;          // гарантирует круг
+      width: var(--ring-size);  // будем задавать через переменные
+      height: auto;
+
+      &__1 { --ring-size: 100%; }          // 1200/1200
+      &__2 { --ring-size: 87.5%; }        // 1050/1200
+      &__3 { --ring-size: 75%; }          // 900/1200
+      &__4 { --ring-size: 62.5%; }        // 750/1200
+      &__5 { --ring-size: 50%; }          // 600/1200
+      &__6 { --ring-size: 37.5%; }
+
+
+      &__2 {
+        border: 2px solid transparent;
+        background: var(--card-border-gradient-black);
+      }
+
+
+    }
+}

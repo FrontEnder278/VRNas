@@ -1,0 +1,29 @@
+.about-us {
+    display: grid;
+    row-gap: 40px;
+
+  @include mobile-above {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.about-us .section__body {
+  position: relative;
+  order: -1;
+}
+
+.about-us .hero-video-player {
+  position: absolute;
+  right: 10%;
+  top: 80%;
+
+  @include tablet {
+    top: 60%;
+  }
+
+  @include mobile {
+    top: 80%;
+  }
+}
+

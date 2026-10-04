@@ -1,0 +1,18 @@
+.icon {
+
+  @include square(20px);
+  //position: absolute;
+  display: inline-flex;
+
+ &--hero-play {
+   @include square(10px);
+ }
+
+  &--service-card {
+    @include square(44px);
+  }
+
+  &--video-play {
+    @include square(fluid(100, 40));
+  }
+}

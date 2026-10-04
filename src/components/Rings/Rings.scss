@@ -1,0 +1,89 @@
+.rings {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--alt {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      background-color: var(--color-black);
+    }
+    height: 100%;
+    mask-image: linear-gradient(
+            to bottom,
+            rgba(0,0,0,1) 0%,
+            rgba(0,0,0,1) 35%,
+            rgba(0,0,0,0.6) 45%,
+            rgba(0,0,0,0) 50%
+    ); // позволяет наложить маску сверху вниз меняя прозрачность
+
+    -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0,0,0,1) 0%,
+            rgba(0,0,0,1) 25%,
+            rgba(0,0,0,0.6) 40%,
+            rgba(0,0,0,0) 50%
+    );
+   }
+  }
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-alt);
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+
+  &__1 {
+    width: 1200px;
+    height: 1200px;
+    position: absolute;
+
+    .tooltip__inner {
+      &--2 {
+        position: absolute;
+        left: 40%;
+      }
+    }
+
+    &--alt {
+      height: 600px;
+    }
+  }
+
+  &__2 {
+    width: 1050px;
+    height: 1050px;
+  }
+
+  &__3 {
+    width: 900px;
+    height: 900px;
+  }
+
+  &__4 {
+    width: 750px;
+    height: 750px;
+  }
+
+  &__5 {
+    width: 600px;
+    height: 600px;
+  }
+
+  &__6 {
+    width: 450px;
+    height: 450px;
+  }
+}

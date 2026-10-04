@@ -1,0 +1,61 @@
+.slider-card {
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+
+    @include laptop {
+      display: block;
+      max-height: 480px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+
+    &::before {
+      @include abs-cover;
+      content: "";
+      background: linear-gradient(
+      180deg,
+      #3246BC 0%,
+      #192883 100%);
+      opacity: 0.4;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+
+  }
+
+  &__description {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 10px;
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--color-white);
+    border-radius: 30px;
+    max-width: fit-content;
+    white-space: nowrap;
+  }
+
+  &__title {
+    max-width: 500px;
+  }
+}

@@ -1,0 +1,16 @@
+.video {
+  @include mobile-above {
+    padding-top: 100px;
+  }
+
+}
+
+.video .section__header {
+  display: flex;
+  justify-content: center;
+}
+
+.video .section__wrapper {
+  max-width: 800px;
+  text-align: center;
+}

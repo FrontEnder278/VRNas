@@ -1,0 +1,109 @@
+.hero {
+  /* ГЛАВНАЯ СЕТКА */
+
+  display: grid;
+  position: relative;
+  grid-template-areas:
+  "header image"
+  "body body";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  padding-top: fluid(150, 100);
+
+  @include laptop {
+    overflow: hidden;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 140vw;
+    height: 80%;
+    transform: translate(-70%, -40%);
+    background: url("/public/decor-hero.svg") center/contain no-repeat;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @include mobile {
+    grid-template-areas:
+    "header header"
+    "image image"
+    "body body";
+  }
+}
+
+/* привязка областей (ВАЖНО: через cascade, без изменения JSX) */
+.hero .section__header {
+  grid-area: header;
+}
+
+.hero .section__image {
+  position: relative;
+  grid-area: image;
+  align-self: end;
+  justify-self: end;
+  overflow: visible;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 400px;
+    top: 50%;
+    left: 0;
+    border-radius: 30%;
+
+    background: radial-gradient(
+    circle,
+    rgba(12, 186, 241, 0.6) 0%,
+    rgba(233, 92, 233, 0.4) 40%,
+    );
+
+    filter: blur(80px); // радиус размытия, создает
+    // эффект свечения
+    opacity: 0.9;
+    z-index: -1;
+  }
+}
+
+.hero .section__body {
+  grid-area: body;
+  position: relative;
+  z-index: 1;
+}
+
+/* дополнительные hero-элементы */
+.hero__media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: media;
+
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+  }
+
+  @include mobile {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include mobile-s {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+}
+
+.hero__actions {
+  @include tablet {
+    padding-bottom: 32px;
+  }
+}

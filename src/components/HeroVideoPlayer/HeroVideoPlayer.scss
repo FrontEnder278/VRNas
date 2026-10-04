@@ -1,0 +1,38 @@
+.hero-video-player {
+  width: fluid(200, 150);
+  height: auto;
+  overflow: hidden;
+  transition-duration: var(--transition-duration-longer);
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    transition-duration: var(--transition-duration-longer);
+  }
+
+  &__video {
+    transition-duration: var(--transition-duration-longer);
+
+    &:not(.is-active):hover {
+        transform: scale(1.15);
+    }
+  }
+
+  &__button {
+    @include abs-center;
+    @include square(28px);
+
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    transition-duration: var(--transition-duration-longer);
+
+    &.is-active {
+      display: none;
+    }
+  }
+
+  &__media:hover &__button {
+    transform: scale(1.15);
+  }
+}

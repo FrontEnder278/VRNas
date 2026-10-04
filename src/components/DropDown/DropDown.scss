@@ -1,0 +1,32 @@
+.dropdown {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  top: 30px;
+  border: 1px solid transparent;
+  background: var(--card-border-black-alt);
+  transition-duration:  var(--transition-duration-longer);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  @include mobile {
+    position: static;   // ❗ ключ
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  &.is-active {
+    max-height: 170px;
+    opacity: 1;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 10px;
+    padding: 15px;
+  }
+}

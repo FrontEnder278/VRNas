@@ -1,0 +1,55 @@
+.choose {
+  padding-top: var(--section-padding-y);
+  display: grid;
+  justify-content: center;
+  row-gap: 100px;
+
+  @include mobile-above {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.choose .section__body {
+  position: relative;
+  display: grid;
+  justify-content: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 400px;
+    top: 25%;
+    left: 25%;
+    border-radius: 30%;
+    background: radial-gradient(
+    circle,
+    rgba(12, 186, 241, 0.6) 0%,
+    rgba(233, 92, 233, 0.4) 40%);
+    filter: blur(80px); // радиус размытия, создает
+    // эффект свечения
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  @include mobile {
+    order: -1;
+  }
+}
+
+.choose .hero-video-player {
+  position: absolute;
+  left: 60%;
+  top: 80%;
+  transform: translate(-50%, 50%);
+
+  @include tablet {
+    transform: translate(-50%, 0%);
+    top: 70%;
+  }
+
+  @include mobile {
+    transform: translate(-50%, 10%);
+    top: 80%;
+  }
+}
