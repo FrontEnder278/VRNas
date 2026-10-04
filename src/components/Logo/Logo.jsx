@@ -19,7 +19,7 @@ const Logo = (props) => {
         >
             <img
                 className='logo__image'
-                src='/Logo.svg'
+                src={`${import.meta.env.BASE_URL}Logo.svg`}
                 width='101'
                 height='30'
                 alt=''

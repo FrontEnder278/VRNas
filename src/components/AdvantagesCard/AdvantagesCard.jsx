@@ -1,6 +1,8 @@
 import './AdvantagesCard.scss'
 import classNames from "classnames";
-import {Image} from "minista";
+import experticeIcon from '@/assets/images/advantages-card/expertice.svg'
+import customizationIcon from '@/assets/images/advantages-card/customization.svg'
+import serviceIcon from '@/assets/images/advantages-card/service.svg'
 
 
 const AdvantagesCard = (props) => {
@@ -15,21 +17,21 @@ const AdvantagesCard = (props) => {
             description: 'Our team consists of experienced VR developers,' +
             ' designers, and technicians who have a passion for VR and a commitment' +
             ' to delivering quality work and give the best service',
-            icon: '/src/assets/images/advantages-card/expertice.svg',
+            icon: experticeIcon,
         },
         {
             title: 'Customization',
             description: 'Every client is unique, and we believe every VR experience should' +
             ' be too. We\'ll work with you to create a customized solution that meets your' +
             ' specific needs and goals',
-            icon: '/src/assets/images/advantages-card/customization.svg',
+            icon: customizationIcon,
         },
         {
             title: 'Service',
             description: 'We believe in providing exceptional customer service, from initial' +
             ' consultation to final delivery. Our goal is to ensure you\'re satisfied with every' +
             ' aspect of your VR experience.',
-            icon: '/src/assets/images/advantages-card/service.svg',
+            icon: serviceIcon,
         }
     ]
 
@@ -40,7 +42,7 @@ const AdvantagesCard = (props) => {
                     <li
                         className='advantages-card__item'
                         key={index}>
-                       <Image src={icon}/>
+                       <img src={icon} alt="" />
                         <div className="advantages-card__item-wrapper">
                         <h3 className="advantages-card__title h6">
                             {title}

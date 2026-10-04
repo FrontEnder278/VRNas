@@ -1,7 +1,6 @@
 import './AffordableServices.scss'
 import classNames from "classnames";
 import mainImage from '@/assets/images/affordable/main.png'
-import {Image} from "minista";
 import menuItems from "../../sections/Affordable/affordableitem.js";
 import Icon from "@/components/Icon";
 import Button from "@/components/Button";
@@ -40,10 +39,9 @@ const AffordableServices = (props) => {
                 </ul>
 
                 <div className="affordable-services__media">
-                    {/*<Image className='affordable-services__image' src={mainImage}/>*/}
                     <img
                         className="affordable-services__images"
-                        src="src/assets/images/affordable/main.png"
+                        src={mainImage}
                         alt=""
                     />
                 </div>

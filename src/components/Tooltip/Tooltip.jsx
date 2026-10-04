@@ -1,5 +1,4 @@
 import './Tooltip.scss'
-import {Image} from "minista";
 import classNames from "classnames";
 
 const Tooltip = (props) => {
@@ -26,7 +25,7 @@ const Tooltip = (props) => {
                 className="tooltip__icon"
                 data-js-tooltip-icon=''
             >
-                <Image src={src}/>
+                <img src={src} alt="" />
             </div>
             <div
                 className="tooltip__card"

@@ -1,7 +1,12 @@
 import './ServiceCard.scss'
 import classNames from "classnames";
-import {Image} from "minista";
 import Button from "@/components/Button";
+import service1 from '@/assets/images/service/service-1.svg'
+import service2 from '@/assets/images/service/service-2.svg'
+import service3 from '@/assets/images/service/service-3.svg'
+import service4 from '@/assets/images/service/service-4.svg'
+import service5 from '@/assets/images/service/service-5.svg'
+import service6 from '@/assets/images/service/service-6.svg'
 
 
 const ServiceCard = (props) => {
@@ -50,7 +55,7 @@ const ServiceCard = (props) => {
                 {menuItems.map(({icon, title, description}, index) => (
                     <li className='service-card__item' key={index}>
                         <div className='service-card__body'>
-                       <Image src={icon}/>
+                       <img src={icon} alt="" />
                                 <div className="service-card__text">
                                     <h3 className="service-card__title h6">
                                         {title}
