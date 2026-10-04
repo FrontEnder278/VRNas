@@ -12,7 +12,8 @@
   }
 
   @include mobile-s {
-    height: 300px;
+    max-height: 500px;
+    height: 100%;
   }
 
   &-swiper {

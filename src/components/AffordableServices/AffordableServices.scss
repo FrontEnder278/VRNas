@@ -116,8 +116,6 @@
   &__plan {
     --paddingBottom: 48px;
 
-
-
     position: absolute;
     right: 170px;
     bottom: calc(var(--paddingBottom) * -1);
@@ -130,7 +128,7 @@
     background: var(--card-border-gradient-black-alt);
 
     @include tablet {
-        position: static;
+        right: 0px;
     }
   }
 

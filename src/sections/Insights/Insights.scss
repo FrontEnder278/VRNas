@@ -1,13 +1,8 @@
 .insights {
-  --section-padding-y: 300px;
+  --section-padding-y: 120px;
   padding-top: var(--section-padding-y);
   position: relative;
   z-index: 100;
-  &__button {
-    &:hover {
-
-    }
-  }
 }
 
 .insights .section__body {
@@ -16,7 +11,7 @@
 
   @include laptop {
     flex-direction: column;
-    row-gap: 100px;
+    justify-content: center;
   }
 
 }

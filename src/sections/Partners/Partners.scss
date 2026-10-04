@@ -1,6 +1,6 @@
 .partners {
   position: relative;
-  height: 1000px;
+  height: fluid(1000, 500);
   padding-block: var(--section-padding-y);
 
   &__wrapper {
