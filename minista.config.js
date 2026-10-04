@@ -3,7 +3,7 @@ import path from "path";
 
 export default defineConfig({
   root: "",
-  base: "/",
+  base: process.env.GITHUB_ACTIONS ? "/VRNas/" : "/",
   public: "public",
   out: "dist",
   assets: {
